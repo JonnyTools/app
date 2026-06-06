@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>WG App - Produktdokumentation fuer Mitglieder</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 18mm 22mm;
+    }
+
+    body {
+      margin: 0;
+      color: #1f2933;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 11.2pt;
+      line-height: 1.52;
+      background: #ffffff;
+    }
+
+    h1, h2, h3 {
+      color: #152238;
+      line-height: 1.18;
+      margin: 0 0 10px;
+      page-break-after: avoid;
+    }
+
+    h1 {
+      font-size: 30pt;
+      margin-top: 34mm;
+      max-width: 142mm;
+    }
+
+    h2 {
+      font-size: 18pt;
+      margin-top: 26px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #d6dde6;
+    }
+
+    h3 {
+      font-size: 13pt;
+      margin-top: 18px;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 6px 0 14px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .cover {
+      min-height: 247mm;
+      position: relative;
+      page-break-after: always;
+    }
+
+    .kicker {
+      color: #506176;
+      font-size: 10pt;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-top: 18mm;
+    }
+
+    .subtitle {
+      max-width: 142mm;
+      color: #394b61;
+      font-size: 15pt;
+      line-height: 1.38;
+      margin-top: 14px;
+    }
+
+    .meta {
+      position: absolute;
+      bottom: 18mm;
+      left: 0;
+      right: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      color: #536579;
+      font-size: 10pt;
+      border-top: 1px solid #d6dde6;
+      padding-top: 14px;
+    }
+
+    .summary {
+      background: #eef4f8;
+      border-left: 5px solid #2f6f8f;
+      padding: 14px 16px;
+      margin: 12px 0 18px;
+    }
+
+    .principle {
+      background: #f7f2e8;
+      border-left: 5px solid #9b6a22;
+      padding: 12px 15px;
+      margin: 14px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 12px 0 18px;
+    }
+
+    .box {
+      border: 1px solid #d6dde6;
+      padding: 12px 13px;
+      background: #ffffff;
+      page-break-inside: avoid;
+    }
+
+    .box h3 {
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+
+    .label {
+      color: #506176;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 8.5pt;
+      letter-spacing: .04em;
+    }
+
+    .flow {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0 18px;
+      font-size: 10.5pt;
+    }
+
+    .flow th, .flow td {
+      border: 1px solid #d6dde6;
+      padding: 8px 9px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .flow th {
+      background: #eef4f8;
+      color: #152238;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .muted {
+      color: #536579;
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      color: #536579;
+      font-size: 9.5pt;
+    }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div class="kicker">Produktdokumentation fuer WG-Mitglieder</div>
+    <h1>WG App</h1>
+    <p class="subtitle">Eine faire, nachvollziehbare und gemeinsam kontrollierte App fuer Aufgaben, Zuständigkeiten, Preise, Beschluesse und Monatsberichte in einer Wohngemeinschaft.</p>
+    <div class="meta">
+      <div>
+        <strong>Zielgruppe</strong><br>
+        Aktive und neue WG-Mitglieder
+      </div>
+      <div>
+        <strong>Stand</strong><br>
+        06.06.2026
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>1. Kurzueberblick</h2>
+    <div class="summary">
+      <p><strong>Die WG App soll das gemeinsame Zusammenleben organisatorisch einfacher und fairer machen.</strong> Sie dokumentiert, welche Aufgaben offiziell gelten, wer fuer welche Aufgabe zustaendig ist, wer eine Aufgabe wirklich erledigt hat und wie diese Leistung im Monatsbericht beruecksichtigt wird.</p>
+    </div>
+    <p>Die App ist nicht nur eine digitale To-do-Liste. Sie ist ein gemeinsames System fuer Transparenz: Aufgaben, Preise, Aenderungen, Zustimmungen und Berichte werden so gespeichert, dass alle aktiven Mitglieder dieselbe Informationsgrundlage haben.</p>
+    <p>Besonders wichtig ist dabei, dass historische Daten nicht still geaendert werden. Wenn sich ein Preis, eine Zustaendigkeit oder ein Bericht aendert, wird diese Aenderung dokumentiert und bei wichtigen Punkten von den Mitgliedern bestaetigt.</p>
+
+    <h2>2. Warum diese App gebraucht wird</h2>
+    <p>In vielen WGs entstehen Diskussionen nicht, weil jemand absichtlich unfair handelt, sondern weil Informationen fehlen oder spaeter unterschiedlich erinnert werden. Typische Fragen sind:</p>
+    <ul>
+      <li>Wer war offiziell fuer eine Aufgabe zustaendig?</li>
+      <li>Wer hat sie tatsaechlich erledigt?</li>
+      <li>Wie oft wurde eine Aufgabe im Monat gemacht?</li>
+      <li>Wie viel ist eine Aufgabe wert?</li>
+      <li>Wer hat Zusatzaufgaben uebernommen?</li>
+      <li>Welche Regeln wurden gemeinsam beschlossen?</li>
+    </ul>
+    <p>Die App beantwortet diese Fragen mit nachvollziehbaren Daten statt mit Erinnerung, Chatverlaeufen oder Bauchgefuehl.</p>
+
+    <div class="principle">
+      <p><strong>Leitgedanke:</strong> Vorbereiten ist erlaubt. Allein entscheiden ist nicht erlaubt. Dokumentieren ist Pflicht.</p>
+    </div>
+  </section>
+
+  <section class="page-break">
+    <h2>3. Grundprinzipien</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>Regeln und Ausfuehrung getrennt</h3>
+        <p>Die App unterscheidet zwischen der offiziellen Regel und dem, was im Alltag wirklich passiert ist. Beispiel: Recycling kann Jonathan und Anna gemeinsam zugewiesen sein, aber an einem konkreten Tag von Jonathan erledigt werden.</p>
+      </div>
+      <div class="box">
+        <h3>Historie bleibt erhalten</h3>
+        <p>Preise, Berichte und alte Aufgaben werden nicht still ueberschrieben. Stattdessen entstehen neue Versionen oder Korrektureintraege.</p>
+      </div>
+      <div class="box">
+        <h3>Wichtige Aenderungen brauchen Zustimmung</h3>
+        <p>Preisveraenderungen, neue Aufgaben, Zustaendigkeitswechsel oder finale Monatsberichte werden nicht von einer einzelnen Person beschlossen.</p>
+      </div>
+      <div class="box">
+        <h3>Alle sehen die gleiche Grundlage</h3>
+        <p>Aktive Mitglieder koennen Aufgaben, Ausfuehrungen, Beschluesse, Berichte und Audit-Logs einsehen.</p>
+      </div>
+    </div>
+
+    <h2>4. Hauptbereiche der App</h2>
+    <h3>4.1 Persoenliches Aufgaben-Tracking</h3>
+    <p>Dieser Bereich wird im Alltag genutzt. Jedes Mitglied sieht die eigenen Aufgaben, kann erledigte Aufgaben erfassen und Zusatz- oder Ersatzaufgaben dokumentieren.</p>
+    <p><span class="label">Begruendung</span><br>Die taegliche Nutzung muss einfach sein. Mitglieder sollen nicht erst eine Sitzung oder einen Admin brauchen, nur um eine erledigte Aufgabe zu erfassen.</p>
+
+    <h3>4.2 WG-Sitzung und Beschluesse</h3>
+    <p>In diesem Bereich werden offizielle Aenderungen vorbereitet: neue Mitglieder, geaenderte Preise, neue Aufgaben, deaktivierte Aufgaben oder neue Zustaendigkeiten. Aenderungen werden als Vorschlag gesammelt und durch digitale Zustimmung bestaetigt.</p>
+    <p><span class="label">Begruendung</span><br>Regeln betreffen alle. Deshalb sollen sie sichtbar vorbereitet, gemeinsam akzeptiert und ab einem klaren Datum gueltig werden.</p>
+
+    <h3>4.3 Analyse und Fairness</h3>
+    <p>Der Analysebereich zeigt, wie Aufgaben und Werte verteilt sind: pro Mitglied, pro Aufgabe, pro Monat und bei geteilten Aufgaben. Auch verpasste Aufgaben, Zusatzaufgaben und Ersatzleistungen werden sichtbar.</p>
+    <p><span class="label">Begruendung</span><br>Fairness laesst sich besser beurteilen, wenn nicht nur einzelne Aufgaben, sondern auch Muster ueber einen Zeitraum sichtbar sind.</p>
+  </section>
+
+  <section class="page-break">
+    <h2>5. Rollen und Rechte</h2>
+    <table class="flow">
+      <thead>
+        <tr>
+          <th>Rolle</th>
+          <th>Funktionalitaet</th>
+          <th>Warum so?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aktives Mitglied</td>
+          <td>Eigene Aufgaben sehen, Aufgaben erledigen, Zusatzaufgaben erfassen, Vorschlaege erstellen, abstimmen, Berichte pruefen und Audit-Log ansehen.</td>
+          <td>Alle aktiven Mitglieder tragen zur WG bei und sollen gleiche Einsicht in relevante Daten haben.</td>
+        </tr>
+        <tr>
+          <td>Facilitator</td>
+          <td>WG-Sitzung vorbereiten, Aenderungen zusammenfassen, Signaturrunde starten und Berichtsentwurf vorbereiten.</td>
+          <td>Eine Person darf Organisation erleichtern, aber keine fairheitsrelevanten Entscheidungen allein treffen.</td>
+        </tr>
+        <tr>
+          <td>System</td>
+          <td>Validiert Regeln, speichert Ausfuehrungen, erzeugt Audit-Logs, sperrt genehmigte Beschluesse und erstellt Monatsberichte.</td>
+          <td>Wichtige Regeln sollen konsequent und nachvollziehbar umgesetzt werden, unabhaengig davon, wer die App bedient.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. Genehmigungen und Signaturen</h2>
+    <p>Nicht jede Aktion braucht dieselbe Zustimmung. Die App unterscheidet nach Tragweite:</p>
+    <ul>
+      <li><strong>Keine Genehmigung:</strong> eigene Aufgabe erledigen, eigenes Profil bearbeiten, eigene Historie ansehen.</li>
+      <li><strong>Bestaetigung der betroffenen Person:</strong> Aufgabe fuer jemand anderes erledigen oder Ersatzaufgabe beanspruchen.</li>
+      <li><strong>Mehrheit der aktiven Mitglieder:</strong> neue Aufgabe, deaktivierte Aufgabe, geaenderte feste Zustaendigkeit oder deaktiviertes Mitglied.</li>
+      <li><strong>Einstimmige Zustimmung:</strong> Preisveraenderungen, finale Monatsberichte, alte Berichtskorrekturen und Aenderungen an Governance-Regeln.</li>
+    </ul>
+    <p><span class="label">Begruendung</span><br>Das System soll fair sein, aber nicht unnoetig kompliziert. Kleine persoenliche Aktionen bleiben leicht, waehrend sensible Aenderungen gemeinsam bestaetigt werden.</p>
+  </section>
+
+  <section class="page-break">
+    <h2>7. Wichtige Funktionen im Detail</h2>
+    <h3>Mitgliederverwaltung</h3>
+    <p>Mitglieder koennen aktiv, inaktiv, pending oder archiviert sein. Ehemalige Mitglieder bleiben in alten Berichten sichtbar, werden aber aus zukuenftigen Aufgaben entfernt.</p>
+    <p><span class="label">Begruendung</span><br>Historische Berichte muessen nachvollziehbar bleiben. Deshalb werden Mitglieder mit Historie nicht einfach geloescht.</p>
+
+    <h3>Aufgaben und Preise</h3>
+    <p>Aufgaben koennen erstellt, bearbeitet, deaktiviert, einer Person zugewiesen, geteilt oder als offen fuer alle markiert werden. Preise werden versioniert und gelten ab einem bestimmten Datum.</p>
+    <p><span class="label">Begruendung</span><br>Wenn sich ein Preis aendert, sollen alte Monate korrekt bleiben. Eine Aufgabe, die im April CHF 2 wert war, darf nicht rueckwirkend CHF 3 werden, nur weil der Preis im Juli geaendert wurde.</p>
+
+    <h3>Geteilte Aufgaben</h3>
+    <p>Eine Aufgabe kann mehreren Mitgliedern gehoeren. Die Verteilung kann gleichmaessig, abwechselnd, flexibel oder gewichtet sein. Jede konkrete Ausfuehrung wird trotzdem einer Person zugeordnet.</p>
+    <p><span class="label">Begruendung</span><br>Geteilte Aufgaben sind in WGs normal. Die App soll zeigen koennen, ob die praktische Verteilung mit der vereinbarten Verantwortung zusammenpasst.</p>
+
+    <h3>Zusatz- und Ersatzaufgaben</h3>
+    <p>Mitglieder koennen Aufgaben erfassen, die ausserhalb der normalen Zustaendigkeit liegen, oder Aufgaben fuer andere uebernehmen. Je nach Fall braucht es eine Bestaetigung.</p>
+    <p><span class="label">Begruendung</span><br>Mehrarbeit soll sichtbar werden, aber strittige Ansprueche sollen nicht allein durch die eintragende Person freigegeben werden.</p>
+
+    <h3>Monatsbericht</h3>
+    <p>Die App erstellt Monatsberichte mit Aufgaben, Ausfuehrungen, Mitgliedersummen, Aufgabensummen und relevanten Statusinformationen. Der Bericht geht in Review, wird geprueft, genehmigt, gesperrt und erst danach versendet.</p>
+    <p><span class="label">Begruendung</span><br>Ein Monatsbericht kann Grundlage fuer Geld, Ausgleich oder Diskussionen sein. Deshalb braucht er Review, Freigabe und einen gesperrten finalen Zustand.</p>
+  </section>
+
+  <section class="page-break">
+    <h2>8. Typischer Ablauf eines Monats</h2>
+    <table class="flow">
+      <thead>
+        <tr>
+          <th>Schritt</th>
+          <th>Was passiert?</th>
+          <th>Nutzen fuer Mitglieder</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Regeln sind aktiv</td>
+          <td>Aufgaben, Preise und Zustaendigkeiten gelten gemaess den letzten genehmigten Beschluessen.</td>
+          <td>Alle wissen, welche Grundlage gilt.</td>
+        </tr>
+        <tr>
+          <td>2. Alltag erfassen</td>
+          <td>Mitglieder markieren Aufgaben als erledigt und erfassen Zusatz- oder Ersatzaufgaben.</td>
+          <td>Leistungen gehen nicht verloren.</td>
+        </tr>
+        <tr>
+          <td>3. Bericht generieren</td>
+          <td>Das System erstellt einen Monatsbericht mit Preis-Snapshots und Ausfuehrungen.</td>
+          <td>Der Monat wird objektiv zusammengefasst.</td>
+        </tr>
+        <tr>
+          <td>4. Review</td>
+          <td>Mitglieder pruefen den Bericht und melden Fehler oder Streitfaelle.</td>
+          <td>Korrekturen passieren sichtbar und nachvollziehbar.</td>
+        </tr>
+        <tr>
+          <td>5. Freigabe und Sperrung</td>
+          <td>Nach Zustimmung wird der Bericht gesperrt und kann nicht still geaendert werden.</td>
+          <td>Alle koennen sich auf die finale Version verlassen.</td>
+        </tr>
+        <tr>
+          <td>6. Versand</td>
+          <td>Der genehmigte Bericht wird per E-Mail versendet und der Versand dokumentiert.</td>
+          <td>Der Bericht ist offiziell verteilt und archiviert.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>9. Korrekturen und Streitfaelle</h2>
+    <p>Wenn ein Fehler entdeckt wird, wird der alte Wert nicht heimlich ersetzt. Stattdessen entsteht ein Korrektureintrag mit Originalwert, Korrekturwert, Grund, erstellender Person, Genehmigung und Zeitpunkt.</p>
+    <p><span class="label">Begruendung</span><br>Gerade bei Geld, Arbeit und Fairness ist Nachvollziehbarkeit wichtiger als schnelle unsichtbare Bearbeitung. Die App soll Vertrauen schaffen, nicht nur Daten veraendern.</p>
+
+    <h2>10. PDF-Import als spaetere Unterstuetzung</h2>
+    <p>Bestehende PDF-Aemtli- oder Aufgabenplaene sollen spaeter hochgeladen und in strukturierte Aufgaben ueberfuehrt werden koennen. Die App erkennt Aufgaben, Mitglieder, Daten und Markierungen, zeigt unsichere Stellen aber immer in einer Review-Ansicht.</p>
+    <p><span class="label">Begruendung</span><br>PDFs sind oft uneinheitlich oder schwer maschinell lesbar. Der Import soll Arbeit sparen, aber keine unkontrollierte Wahrheit erzeugen.</p>
+  </section>
+
+  <section class="page-break">
+    <h2>11. Was im MVP enthalten ist</h2>
+    <p>Die erste Version soll beweisen, dass eine WG einen ganzen Monat fair dokumentieren und auswerten kann. Enthalten sind:</p>
+    <ul>
+      <li>Mitgliederverwaltung</li>
+      <li>Aufgabenverwaltung</li>
+      <li>Preisverwaltung mit Versionen</li>
+      <li>Zustaendigkeiten und geteilte Aufgaben</li>
+      <li>Aufgabe als erledigt markieren</li>
+      <li>Zusatz- und Ersatzaufgaben</li>
+      <li>Vorschlags- und Signatursystem</li>
+      <li>Monatsbericht</li>
+      <li>Basisanalyse</li>
+      <li>Audit-Log</li>
+    </ul>
+
+    <h2>12. Was bewusst spaeter kommt</h2>
+    <p>Einige Funktionen sind sinnvoll, aber fuer den ersten Beweis der Kernlogik nicht zwingend:</p>
+    <ul>
+      <li>Automatische PDF-Farberkennung und komplexe OCR</li>
+      <li>Push-Benachrichtigungen</li>
+      <li>Kalenderintegration</li>
+      <li>Foto-Nachweise</li>
+      <li>Zahlungsabgleich</li>
+      <li>Mehrsprachigkeit</li>
+      <li>Offline-Modus</li>
+    </ul>
+
+    <h2>13. Nutzenversprechen</h2>
+    <p>Die WG App soll Diskussionen nicht ersetzen, aber sie besser machen. Sie liefert eine gemeinsame, transparente Faktenbasis. Mitglieder sehen, was gilt, was erledigt wurde, was geaendert wurde und wer zugestimmt hat.</p>
+    <p>Damit entsteht ein System, das Organisation erleichtert, Mehrarbeit sichtbar macht, historische Fairness bewahrt und sensible Entscheidungen gemeinschaftlich absichert.</p>
+
+    <p class="footer-note">Diese Dokumentation basiert auf den vorhandenen Produkt-, Governance-, Daten-, Technik- und Prozessdokumenten im Projektordner <strong>app/docs</strong>.</p>
+  </section>
+</body>
+</html>
